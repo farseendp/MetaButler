@@ -28,13 +28,19 @@ from metabutler.modules.connection import connect_button
 PM_START_TEXT = """
 Hi {}, my name is *{}*! I am a group manager bot.
 
-You can find the list of available commands with /help.
+ഗ്രൂപ്പിൽ കയറാൻ വരുന്നവർ ഗ്രൂപ്പിനെ പറ്റിയും റൂൾസ് നെ  പറ്റിയും അറിയണം... 😌എന്നാൽ ഗ്രൂപ്പ് ഭരിക്കാൻ വരുന്നവൻ അവൻ ആരാ എന്ന് ബാക്കി ഉള്ളവരെ  അറിയിക്കണം!!😈
+
+നിങ്ങൾ ധൈര്യശാലികൾ ആണോ😎  എന്നാൽ /help  ഇൽ തൊട്ട് നോക്കു!കമ്മാൻഡ്‌സ് ഒകെ വരുന്നത് കാണാം☠☠☠.
 """
 
 HELP_STRINGS = """
 Hey there!
-I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
-the things I can help you with.
+ഗ്രൂപ്പിൽ കയറാൻ വരുന്നവർ ഗ്രൂപ്പിനെ പറ്റിയും റൂൾസ് നെ  പറ്റിയും അറിയണം... 😌എന്നാൽ ഗ്രൂപ്പ് ഭരിക്കാൻ വരുന്നവൻ അവൻ ആരാ എന്ന് ബാക്കി ഉള്ളവരെ  അറിയിക്കണം!!😈
+
+നിങ്ങൾ ധൈര്യശാലികൾ ആണോ😎  എന്നാൽ /help  ഇൽ തൊട്ട് നോക്കു!കമ്മാൻഡ്‌സ് ഒകെ വരുന്നത് കാണാം☠☠☠.
+
+
+
 
 *Main* commands available:
  - /start: start the bot
@@ -162,7 +168,7 @@ def start(update, context):
             buttons = InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="🎉 Add me to your group", url="https://t.me/{}?startgroup=new".format(context.bot.username))],
                 [InlineKeyboardButton(text="⚙️ Connect Group", callback_data="main_connect")],
-                [InlineKeyboardButton(text="🔔 Update Channel", url="https://t.me/metabutlernews")],
+                [InlineKeyboardButton(text="🔔 Update Channel", url="https://t.me/Farseen_king_of_telegram")]])
                 [InlineKeyboardButton(text="Help❓", callback_data="help_back")]])
             update.effective_message.reply_text(PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(context.bot.first_name)), reply_markup=buttons, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
     else:
